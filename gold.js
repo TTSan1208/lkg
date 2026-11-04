@@ -13,17 +13,10 @@ var expirationDate = "9999-01-09T10:10:14Z";
 var purchaseDate = "2026-01-09T10:10:14Z";
 var productId = "locket_1600_1y";
 var subInfo = {
-    auto_resume_date: null,
-    display_name: productId,
     is_sandbox: true,
     ownership_type: "PURCHASED",
     billing_issues_detected_at: null,
-    management_url: "https://apps.apple.com/account/subscriptions",
     period_type: "normal",
-    price: {
-        "amount": 399000.0,
-        "currency": "VND"
-    },
     expires_date: expirationDate,
     grace_period_expires_date: null,
     refunded_at: null,
@@ -31,7 +24,8 @@ var subInfo = {
     original_purchase_date: purchaseDate,
     purchase_date: purchaseDate,
     store: "app_store",
-    store_transaction_id: "2000001108724193"
+    store_transaction_id: "2000001108724193",
+    ownership_type: "PURCHASED"
 };
 var entitlementInfo = {
     grace_period_expires_date: null,
@@ -47,7 +41,6 @@ if (match) {
     if (ent) entitlementKey = ent;
     if (sub) subKey = sub;
 }
-subInfo.display_name = subKey;
 subInfo.product_identifier = subKey;
 entitlementInfo.product_identifier = subKey;
 obj.subscriber.subscriptions[subKey] = subInfo;
