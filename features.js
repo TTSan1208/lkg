@@ -55,9 +55,9 @@ if (ua.includes("Locket")) {
             end_at: "2099-12-31T23:59:59",
             use_local_time_zone: true
         }),
-        android_subscribe_gold_button_enabled: "false",
-        profile_badge_visible: "true",
-        lunar_new_year_app_icon_enabled: "true",
+        android_subscribe_gold_button_enabled: false,
+        profile_badge_visible: true,
+        lunar_new_year_app_icon_enabled: true,
         
     });
 
@@ -66,20 +66,20 @@ if (ua.includes("Locket")) {
     // ============================================================
     Object.assign(obj.entries, {
         history_ads_mode: "off",
-        history_ads_prefetch_count: "0",
-        history_ads_prefetch_immediate: "false",
-        history_ads_prefetch_reroute: "false",
-        history_ads_dynamic_insertion: "false",
-        history_ads_refresh_prefetch_on_foreground: "false",
-        history_ads_floor_price: "0",
-        history_ads_floor_price_att: "0",
-        history_ad_log_displayed_on_background: "false",
-        history_ads_debug_menu: "false",
-        sentry_sample_rate: "0",
-        sentry_network_tracing: "false",
-        sentry_performance_tracking: "false",
-        sentry_trace_sample_rate: "0",
-        sentry_profiles_sample_rate: "0"
+        history_ads_prefetch_count: 0,
+        history_ads_prefetch_immediate: false,
+        history_ads_prefetch_reroute: false,
+        history_ads_dynamic_insertion: false,
+        history_ads_refresh_prefetch_on_foreground: false,
+        history_ads_floor_price: 0,
+        history_ads_floor_price_att: 0,
+        history_ad_log_displayed_on_background: false,
+        history_ads_debug_menu: false,
+        sentry_sample_rate: 0,
+        sentry_network_tracing: false,
+        sentry_performance_tracking: false,
+        sentry_trace_sample_rate: 0,
+        sentry_profiles_sample_rate: 0
     });
 
     // ============================================================
@@ -358,7 +358,7 @@ if (ua.includes("Locket")) {
             "standard", "poll", "color_palette", "review", "music", "location",
             "weather", "time", "streak", "star_sign", "party_time", "locket_count",
             "good_morning", "goodnight", "ootd", "miss_you", "custom", "phunu_2010", "halloween_2026",
-        ])
+        ]),
         overlay_items: JSON.stringify([
             {
                 section: "🎨 General",
