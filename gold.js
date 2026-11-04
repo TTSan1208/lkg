@@ -6,7 +6,7 @@ const mapping = {
 var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
   obj = JSON.parse($response.body);
 obj.Attention = "Chúc mừng bạn! Vui lòng không bán hoặc chia sẻ cho người khác!";
-var NMS = {
+var TTS = {
       auto_resume_date: null,
       display_name: "locket_1600_1y",
       is_sandbox: true,
@@ -36,8 +36,8 @@ var NMS = {
 const match = Object.keys(mapping).find(e => ua.includes(e));
 if (match) {
   let [e, s] = mapping[match];
-  s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = NMS) : obj.subscriber.subscriptions["locket_1600_1y"] = NMS, obj.subscriber.entitlements[e] = locketGold
-} else obj.subscriber.subscriptions["locket_1600_1y"] = NMS, obj.subscriber.entitlements.pro = locketGold;
+  s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = TTS) : obj.subscriber.subscriptions["locket_1600_1y"] = TTS, obj.subscriber.entitlements[e] = locketGold
+} else obj.subscriber.subscriptions["locket_1600_1y"] = TTS, obj.subscriber.entitlements.pro = locketGold;
 $done({
   body: JSON.stringify(obj)
 });
