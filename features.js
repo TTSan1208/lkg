@@ -251,7 +251,8 @@ if (ua.includes("Locket")) {
         fetch_moments_in_conversation: true,
         hide_chat_button: false,
         groups_enabled: true,
-        send_to_self_only_mode: "always_enabled", 
+        send_to_self_enabled: true,
+        notes_to_self_enabled: true,
         time_travel_rewind_v2_enabled: true,
         calendar_delete_moment_enabled: true,
         calendar_rewind_enabled: true, 
@@ -356,7 +357,7 @@ if (ua.includes("Locket")) {
         overlay_dynamic_captions: JSON.stringify([
             "standard", "poll", "color_palette", "review", "music", "location",
             "weather", "time", "streak", "star_sign", "party_time", "locket_count",
-            "good_morning", "goodnight", "ootd", "miss_you", "custom", "phunu_2010", "halloween_2026"
+            "good_morning", "goodnight", "ootd", "miss_you", "custom", "phunu_2010", "halloween_2026",
         ])
         overlay_items: JSON.stringify([
             {
